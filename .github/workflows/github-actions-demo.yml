@@ -8,6 +8,7 @@ jobs:
   build-and-test:
       runs-on: ubuntu-latest
       steps:
+        - uses: actions/checkout@v2
         - name: install cppunit
         - run: sudo apt install -y build-essential
         # - name: configure
