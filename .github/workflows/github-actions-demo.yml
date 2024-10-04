@@ -8,9 +8,13 @@ jobs:
   build-and-test:
       runs-on: ubuntu-latest
       steps:
+        - uses: actions/checkout@v2
         - run: sudo apt install -y build-essential cmake
         # - name: configure
         # - run: ./configure
-        - run: mkdir build && cd build && cmake ../..
+        - run: |
+          mkdir build
+          cd build
+          cmake ..
         - run: make
         - run: ./test
