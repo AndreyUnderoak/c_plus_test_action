@@ -11,6 +11,6 @@ jobs:
         - run: sudo apt install -y build-essential
         # - name: configure
         # - run: ./configure
-        - run: mkdir build && cd build && cmake ../
+        - run: cmake .
         - run: make
         - run: ./test
