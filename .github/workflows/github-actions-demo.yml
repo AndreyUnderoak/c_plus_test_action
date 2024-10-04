@@ -8,9 +8,9 @@ jobs:
   build-and-test:
       runs-on: ubuntu-latest
       steps:
-        - run: sudo apt install -y build-essential
+        - run: sudo apt install -y build-essential cmake
         # - name: configure
         # - run: ./configure
-        - run: ls
-        # - run: make
-        # - run: ./test
+        - run: mkdir build && cd build && cmake ..
+        - run: make
+        - run: ./test
